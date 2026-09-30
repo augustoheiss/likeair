@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --frost-50: #f0f7ff;
+    --frost-100: #e0effe;
+    --frost-200: #bae0fd;
+    --frost-300: #7cc7fb;
+    --frost-400: #36acf7;
+    --frost-500: #0c92e9;
+    --frost-600: #0173c7;
+    --frost-700: #015ca1;
+    --frost-800: #064e86;
+    --frost-900: #0a426f;
+    --frost-950: #062a4a;
+    
+    --navy-950: #031326;
+    --navy-900: #08213e;
+    
+    --daikin-blue: #0097e6;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+    color: #1e293b;
+    background-color: #ffffff;
+    overflow-x: hidden;
+  }
+}
+
+/* Utilitários Estéticos & Micro-Interações */
+
+.texto-gradiente {
+  background: linear-gradient(135deg, #ffffff 0%, #bae0fd 50%, #36acf7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.texto-gradiente-azul {
+  background: linear-gradient(135deg, #015ca1 0%, #0c92e9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-gradiente {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+
+.fundo-pontos {
+  background-image: radial-gradient(rgba(1, 115, 199, 0.08) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+.fundo-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(1, 115, 199, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(1, 115, 199, 0.05) 1px, transparent 1px);
+}
+
+.btn-brilho {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-brilho::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.25) 50%,
+    transparent 80%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.75s ease-in-out;
+}
+
+.btn-brilho:hover::after {
+  transform: translateX(100%);
+}
+
+.anel-pulso::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 9999px;
+  background: #25d366;
+  opacity: 0.5;
+  animation: pulsoSuave 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  z-index: -1;
+}
+
+@keyframes pulsoSuave {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+}
+
+@keyframes flutuar {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-12px) scale(1.03);
+  }
+}
+
+@keyframes flutuar-lento {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-18px) scale(1.05);
+  }
+}
+
+@keyframes respirar {
+  0%, 100% {
+    transform: translateY(-50%) scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translateY(-50%) scale(1.04);
+    opacity: 1;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-flutuar {
+  animation: flutuar 6s ease-in-out infinite;
+}
+
+.animate-flutuar-lento {
+  animation: flutuar-lento 9s ease-in-out infinite;
+}
+
+.animate-respirar {
+  animation: respirar 8s ease-in-out infinite;
+}
+
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Partícula de Floco */
+.floco {
+  position: absolute;
+  top: -20px;
+  color: #bae0fd;
+  user-select: none;
+  pointer-events: none;
+  animation: quedaNeve linear infinite;
+}
+
+@keyframes quedaNeve {
+  0% {
+    transform: translateY(-20px) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: var(--op, 0.7);
+  }
+  90% {
+    opacity: var(--op, 0.7);
+  }
+  100% {
+    transform: translateY(105vh) translateX(var(--deriva, 20px)) rotate(360deg);
+    opacity: 0;
+  }
+}
