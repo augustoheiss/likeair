@@ -35,12 +35,12 @@ export function Testimonials() {
           </div>
         </div>
 
-        {/* Grade de Depoimentos */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Grade de Depoimentos Reais */}
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {testimonialsData.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+              className="bg-white rounded-3xl p-8 border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 {/* Estrelas */}
