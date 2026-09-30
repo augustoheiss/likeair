@@ -182,13 +182,19 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Rodapé Inferior: Direitos, CNPJ e Link ao Topo */}
+        {/* Rodapé Inferior: Direitos, CNPJ e Links Jurídicos */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-center sm:text-left">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-4 gap-y-1.5 text-center sm:text-left">
             <span>© {currentYear} Like Air Service. Todos os direitos reservados.</span>
+            <span className="hidden sm:inline text-slate-700">•</span>
             <span>CNPJ: {companyData.credentials.cnpj}</span>
-            <Link href="/privacidade" className="hover:text-slate-300 underline underline-offset-2">
-              Política de Privacidade
+            <span className="hidden sm:inline text-slate-700">•</span>
+            <Link href="/termos" className="hover:text-slate-300 underline underline-offset-2 transition-colors">
+              Termos de Uso
+            </Link>
+            <span className="hidden sm:inline text-slate-700">•</span>
+            <Link href="/privacidade" className="hover:text-slate-300 underline underline-offset-2 transition-colors">
+              Privacidade (LGPD)
             </Link>
           </div>
 

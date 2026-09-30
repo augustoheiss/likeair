@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { companyData } from "@/data/companyData";
 import { servicesData } from "@/data/servicesData";
 import {
@@ -225,8 +226,16 @@ export function ContactForm() {
                     <Send className="w-4 h-4" />
                     <span>Enviar Pedido & Iniciar Atendimento</span>
                   </button>
-                  <p className="mt-2 text-center text-[11px] text-slate-500">
-                    Ao clicar, seus dados serão organizados para prosseguimento no WhatsApp oficial.
+                  <p className="mt-2 text-center text-[11px] text-slate-500 leading-normal">
+                    Ao enviar, você concorda com nossos{" "}
+                    <Link href="/termos" className="text-sky-600 hover:underline font-medium">
+                      Termos de Uso
+                    </Link>{" "}
+                    e{" "}
+                    <Link href="/privacidade" className="text-sky-600 hover:underline font-medium">
+                      Política de Privacidade (LGPD)
+                    </Link>
+                    .
                   </p>
                 </div>
               </form>
