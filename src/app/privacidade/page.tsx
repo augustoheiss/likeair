@@ -207,9 +207,23 @@ export default function PrivacidadePage() {
                   A codificação, engenharia de software e suporte à infraestrutura deste website foram executados por <strong>prestadores de serviços técnicos de tecnologia independentes</strong>, que atuaram estritamente no desenvolvimento da interface digital.
                 </p>
                 <p>
-                  Esses prestadores de tecnologia não detêm acesso contínuo, posse, custódia nem controle sobre os dados de clientes gerados nas comunicações comerciais ou nas planilhas operacionais da Like Air Service. Portanto, qualquer solicitação referente à privacidade, retificação ou exclusão de dados pessoais deve ser direcionada diretamente à Like Air Service, única controladora legal do acervo de dados.
+                  Esses prestadores de tecnologia não detêm acesso contínuo, posse, custódia nem controle sobre os dados de clientes gerados nas comunicações comerciais ou nas planilhas operacionais da Like Air Service, mesmo quando o código-fonte de interface (front-end) encontra-se publicado em repositório público (GitHub) para fins de transparência tecnológica e portfólio de engenharia. Portanto, qualquer solicitação referente à privacidade, retificação ou exclusão de dados pessoais deve ser direcionada diretamente à Like Air Service, única controladora legal do acervo de dados, inexistindo responsabilidade solidária ou subsidiária do desenvolvedor (Art. 42 da LGPD).
                 </p>
               </div>
+            </section>
+
+            {/* 6-A. Proteção dos Dados Públicos da Empresa Controladora (Art. 7º, §§ 3º e 4º da LGPD) */}
+            <section className="space-y-3">
+              <div className="flex items-center gap-2.5 text-slate-950 font-bold text-lg">
+                <Scale className="w-5 h-5 text-emerald-600 shrink-0" />
+                <h2>6.1. Proteção dos Dados Públicos da Controladora — Vedação de Scraping e Spam (Art. 7º, §§ 3º e 4º da LGPD)</h2>
+              </div>
+              <p>
+                Os dados corporativos e de contato comercial (CNPJ, telefones, WhatsApp, e-mail, nomes de responsáveis técnicos e fotografias operacionais) disponibilizados publicamente nesta página e no código-fonte público têm como <strong>única e estrita finalidade permitir o contato comercial por clientes interessados na contratação de serviços de engenharia térmica e climatização</strong>, observando a boa-fé e a finalidade original de sua disponibilização (Art. 7º, §§ 3º e 4º da LGPD).
+              </p>
+              <p>
+                É expressamente <strong>proibida a coleta automatizada</strong> (<em>web scraping</em>, <em>crawling</em>, mineração por bots), a inclusão em listas de distribuição comercial não solicitada (<em>spam</em> B2B, telemarketing, disparos automatizados via WhatsApp), a comercialização por <em>data brokers</em> ou o uso para treinamento de modelos de inteligência artificial sem autorização prévia e expressa da Like Air Service.
+              </p>
             </section>
 
             {/* 7. Cookies e Tecnologias de Terceiros */}
@@ -232,18 +246,21 @@ export default function PrivacidadePage() {
               <p>
                 Se você tiver qualquer dúvida sobre esta Política de Privacidade ou desejar exercer qualquer um dos seus direitos de titular da LGPD, fale com o nosso encarregado:
               </p>
-              <div className="p-4 rounded-2xl bg-sky-50 border border-sky-100 text-sm">
+              <div className="p-4 rounded-2xl bg-sky-50 border border-sky-100 text-sm space-y-1">
                 <p className="font-bold text-slate-900">Encarregado pelo Tratamento de Dados (DPO)</p>
                 <p className="text-slate-700">Like Air Service — Climatização e Refrigeração</p>
                 <p className="text-slate-700">E-mail: <a href={`mailto:${companyData.contacts.email}`} className="text-sky-700 font-semibold underline">{companyData.contacts.email}</a></p>
-                <p className="text-slate-700">Telefone / WhatsApp: {companyData.contacts.phones[0].display}</p>
+                <p className="text-slate-700">Telefone / WhatsApp Oficial: {companyData.contacts.phones[0].display}</p>
+                <p className="text-xs text-slate-600 pt-2 border-t border-sky-200/70">
+                  <strong>Alerta Antifraude:</strong> A Like Air Service atende exclusivamente pelos canais oficiais listados acima, jamais solicita códigos de segurança via SMS/WhatsApp e não autoriza transferências Pix ou pagamentos de boletos em nome de terceiros desconhecidos fora do CNPJ oficial ({companyData.credentials.cnpj}).
+                </p>
               </div>
             </section>
 
             {/* Rodapé Interno com Data */}
             <div className="pt-6 border-t border-slate-200 text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-2">
-              <span>Atualizado em conformidade com a Lei Federal nº 13.709/2018 (LGPD).</span>
-              <span>São Paulo — SP, Setembro de 2026.</span>
+              <span>Atualizado em conformidade com a Lei Federal nº 13.709/2018 (LGPD — Padrão v3.0).</span>
+              <span>São Paulo — SP, 20 de outubro de 2026.</span>
             </div>
           </div>
         </div>

@@ -100,6 +100,9 @@ export default function TermosPage() {
                   <li>
                     <strong>Ausência de Vínculo Societário:</strong> Os serviços de engenharia de software não caracterizam sociedade de fato, representação comercial, agência ou mandato, sendo a <strong>Like Air Service (CNPJ {companyData.credentials.cnpj})</strong> a única titular e responsável civil e comercial perante os consumidores finais.
                   </li>
+                  <li>
+                    <strong>Transparência de Código-Fonte em Repositório Público e Cláusula de Indenização (Hold Harmless):</strong> Por razões de transparência tecnológica, auditoria de segurança da informação e portfólio de engenharia de software, o código-fonte de apresentação (front-end) desta plataforma pode estar hospedado em repositório público (GitHub), contendo exclusivamente marcação visual e metadados comerciais públicos expressamente autorizados pela Controladora, isentando integralmente o desenvolvedor por interações externas posteriores ao redirecionamento.
+                  </li>
                 </ul>
               </div>
             </section>
@@ -182,6 +185,9 @@ export default function TermosPage() {
               <p>
                 Sua menção e exibição neste portal têm fins unicamente informativos de compatibilidade de serviços, manutenção especializada e comprovação de credenciamento técnico oficial junto à rede Daikin, em estrito respeito à Lei de Propriedade Industrial (Lei nº 9.279/1996).
               </p>
+              <p>
+                Adicionalmente, a disponibilização pública do código-fonte desta aplicação em plataforma de versionamento (GitHub) para fins de transparência tecnológica e portfólio <strong>não concede licença de uso</strong> sobre a marca <strong>Like Air Service</strong>, logotipos, fotografias de obras e equipes técnicas ou textos comerciais, protegidos pela Lei de Direitos Autorais (Lei nº 9.610/1998) e pela Lei da Propriedade Industrial (Lei nº 9.279/1996), sendo proibida a clonagem comercial ou reprodução desautorizada.
+              </p>
             </section>
 
             {/* 7. Foro de Eleição e Legislação Aplicável */}
@@ -200,7 +206,7 @@ export default function TermosPage() {
 
             {/* Rodapé Interno com Data */}
             <div className="pt-6 border-t border-slate-200 text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-2">
-              <span>Última revisão formal: Setembro de 2026.</span>
+              <span>Última revisão formal: 20 de outubro de 2026 (Padrão v3.0).</span>
               <span>Like Air Service — Climatização & Refrigeração</span>
             </div>
           </div>
